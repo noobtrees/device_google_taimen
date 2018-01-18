@@ -32,6 +32,12 @@ DEVICE_PACKAGE_OVERLAYS += device/google/taimen/overlay
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
 
+# IMS
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager \
+    RcsService \
+    PresencePolling
+
 # Audio
 PRODUCT_COPY_FILES += \
     device/google/taimen/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
